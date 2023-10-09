@@ -7,6 +7,12 @@ Features:
 -Identify the top 5 dangerous streets by affected type (Pedestrians, Cyclists, Motorists).
 -Option to view the raw collision data for in-depth analysis.
 
+import streamlit as st
+import pandas as pd
+import numpy as np
+import pydeck as pdk
+import plotly.express as px
+
 DATA_URL = (
 "/home/rhyme/Desktop/Project/Motor_Vehicle_Collisions_-_Crashes.csv"
 )
@@ -86,3 +92,4 @@ else:
 if st.checkbox("Show Raw Data", False):
     st.subheader('Raw Data')
     st.write(data)
+
